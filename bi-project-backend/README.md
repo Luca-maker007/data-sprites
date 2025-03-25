@@ -1,181 +1,104 @@
-# SpringBoot 项目初始模板
+# Lingxi Intelligence AIGC-BI Platform
 
-> 作者：[程序员鱼皮](https://github.com/liyupi)
-> 仅分享于 [编程导航知识星球](https://yupi.icu)
+## Project Introduction
+The Lingxi Intelligence AIGC-BI Platform is a smart data analysis platform built on the Spring Boot, Message Queue (MQ), Artificial Intelligence Generated Content (AIGC), and React technology stack. Compared to traditional Business Intelligence (BI) tools, this platform allows users to simply import raw datasets and input their analysis requirements to automatically generate visual charts and analytical conclusions, significantly reducing the cost and increasing the efficiency of data analysis.
 
-基于 Java SpringBoot 的项目初始模板，整合了常用框架和主流业务的示例代码。
+## Core Features
+1. **Data Import and Management**:
+   - Supports importing various data source formats (e.g., CSV, Excel, JSON).
+   - Provides data preprocessing capabilities, including data cleaning, format conversion, and data merging.
+   - Offers version management for datasets, enabling users to trace and compare different versions of data.
 
-只需 1 分钟即可完成内容网站的后端！！！大家还可以在此基础上快速开发自己的项目。
+2. **Smart Analysis Engine**:
+   - Users can input simple analysis requests (e.g., "Analyze sales trends," "Identify high-value customers"), and the platform will automatically invoke AIGC models to generate precise analytical conclusions.
+   - Combines machine learning algorithms to deeply mine data, uncovering hidden trends, associations, and anomalies within the data.
 
-[toc]
+3. **Visualization Chart Generation**:
+   - Automatically generates various types of visual charts (e.g., bar charts, line charts, pie charts, heatmaps) based on analysis results.
+   - Provides a rich set of chart styles and customization options, allowing users to adjust colors, layouts, and interactivity according to their needs.
 
-## 模板特点
+4. **Report Generation and Sharing**:
+   - Automatically generates analysis reports containing conclusions and visual charts, supporting export in multiple formats (e.g., PDF, HTML, Word).
+   - Supports sharing reports with team members or clients, with options for online viewing and offline download.
 
-### 主流框架 & 特性
+5. **Real-time Data Monitoring and Alerts**:
+   - Supports real-time monitoring of key indicators, with users able to set alert rules to trigger notifications (e.g., email, SMS, instant messaging) when data reaches predefined thresholds.
+   - Provides data dashboard functionality to display dynamic changes in key indicators in real-time.
 
-- Spring Boot 2.7.x（贼新）
-- Spring MVC
-- MyBatis + MyBatis Plus 数据访问（开启分页）
-- Spring Boot 调试工具和项目处理器
-- Spring AOP 切面编程
-- Spring Scheduler 定时任务
-- Spring 事务注解
+## Technical Architecture
+- **Frontend**: React + Ant Design
+  - Built with the React framework to provide a smooth user interface and experience.
+  - Combined with Ant Design component library to achieve aesthetically pleasing and efficient interface design.
+- **Backend**: Spring Boot + RabbitMQ
+  - Developed with the Spring Boot framework to provide robust data processing and business logic support.
+  - Utilizes RabbitMQ for asynchronous message queuing to enhance system performance and response speed.
+- **Data Analysis Engine**: AIGC + Data Mining Algorithms
+  - Integrates advanced AIGC models to achieve natural language understanding and generation, providing users with intelligent analysis recommendations.
+  - Combines traditional data mining algorithms to deeply mine data value, ensuring the accuracy and reliability of analysis results.
 
-### 数据存储
+## Use Cases
+1. **Enterprise Data Analysis**:
+   - Financial departments can quickly analyze financial statements to generate reports on key indicators such as profit, costs, and cash flow.
+   - Sales teams can monitor sales data in real-time, analyze sales trends, predict market demand, and develop precise sales strategies.
+2. **Market Research**:
+   - Market researchers can import market research data to quickly generate market analysis reports, gaining insights into consumer needs and market trends.
+   - Marketing personnel can analyze advertising effectiveness, optimize advertising strategies, and improve marketing ROI.
+3. **Customer Relationship Management**:
+   - Customer service teams can analyze customer feedback data to quickly identify customer pain points and optimize customer service processes.
+   - Customer relationship managers can analyze customer behavior data to identify high-value customers and develop customer loyalty programs.
 
-- MySQL 数据库
-- Redis 内存数据库
-- Elasticsearch 搜索引擎
-- 腾讯云 COS 对象存储
+## Installation and Deployment
+### Environment Requirements
+- **Operating System**: Linux or macOS
+- **Java**: JDK 1.8 or higher
+- **Node.js**: v14 or higher
+- **Database**: MySQL 5.7 or higher
+- **Message Queue**: RabbitMQ 3.8 or higher
 
-### 工具类
+### Installation Steps
+1. **Clone the Project Code**:
+   ```bash
+   git clone https://github.com/your-repo/lingxi-bi-platform.git
+   cd lingxi-bi-platform
+   ```
+2. **Install Backend Dependencies**:
+   ```bash
+   cd backend
+   ./mvnw clean install
+   ```
+3. **Install Frontend Dependencies**:
+   ```bash
+   cd ../frontend
+   npm install
+   ```
+4. **Configure the Database**:
+   - Modify the `backend/src/main/resources/application.yml` file to configure database connection details.
+   - Run the database initialization script located in the `backend/sql` directory.
+5. **Start the Backend Service**:
+   ```bash
+   cd backend
+   ./mvnw spring-boot:run
+   ```
+6. **Start the Frontend Service**:
+   ```bash
+   cd ../frontend
+   npm start
+   ```
+7. **Access the Platform**:
+   - Open your browser and visit [http://localhost:3000](http://localhost:3000).
 
-- Easy Excel 表格处理
-- Hutool 工具库
-- Apache Commons Lang3 工具类
-- Lombok 注解
+## Contribution Guidelines
+We welcome all developers to contribute code, documentation, or suggestions for improvement to the Lingxi Intelligence AIGC-BI Platform. If you would like to participate in the development of this project, please follow these steps:
+1. **Fork the Project**: Fork this project to your personal repository on GitHub.
+2. **Create a Branch**: In your forked repository, create a new branch for developing your feature or fixing an issue.
+3. **Commit Code**: Develop on your branch and commit your code.
+4. **Initiate a Pull Request**: After completing your development, initiate a Pull Request to the `main` branch of this project.
+5. **Wait for Review**: Project maintainers will review your code and may provide feedback for necessary modifications.
 
-### 业务特性
+## Contact Information
+- **Project Homepage**: [https://github.com/your-repo/lingxi-bi-platform](https://github.com/your-repo/lingxi-bi-platform)
+- **Technical Support Email**: support@lingxi-bi.com
+- **Developer Community**: Join our Slack group to exchange experiences with other developers.
 
-- 业务代码生成器（支持自动生成 Service、Controller、数据模型代码）
-- Spring Session Redis 分布式登录
-- 全局请求响应拦截器（记录日志）
-- 全局异常处理器
-- 自定义错误码
-- 封装通用响应类
-- Swagger + Knife4j 接口文档
-- 自定义权限注解 + 全局校验
-- 全局跨域处理
-- 长整数丢失精度解决
-- 多环境配置
-
-
-## 业务功能
-
-- 提供示例 SQL（用户、帖子、帖子点赞、帖子收藏表）
-- 用户登录、注册、注销、更新、检索、权限管理
-- 帖子创建、删除、编辑、更新、数据库检索、ES 灵活检索
-- 帖子点赞、取消点赞
-- 帖子收藏、取消收藏、检索已收藏帖子
-- 帖子全量同步 ES、增量同步 ES 定时任务
-- 支持微信开放平台登录
-- 支持微信公众号订阅、收发消息、设置菜单
-- 支持分业务的文件上传
-
-### 单元测试
-
-- JUnit5 单元测试
-- 示例单元测试类
-
-### 架构设计
-
-- 合理分层
-
-
-## 快速上手
-
-> 所有需要修改的地方鱼皮都标记了 `todo`，便于大家找到修改的位置~
-
-### MySQL 数据库
-
-1）修改 `application.yml` 的数据库配置为你自己的：
-
-```yml
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/my_db
-    username: root
-    password: 123456
-```
-
-2）执行 `sql/create_table.sql` 中的数据库语句，自动创建库表
-
-3）启动项目，访问 `http://localhost:8101/api/doc.html` 即可打开接口文档，不需要写前端就能在线调试接口了~
-
-![](doc/swagger.png)
-
-### Redis 分布式登录
-
-1）修改 `application.yml` 的 Redis 配置为你自己的：
-
-```yml
-spring:
-  redis:
-    database: 1
-    host: localhost
-    port: 6379
-    timeout: 5000
-    password: 123456
-```
-
-2）修改 `application.yml` 中的 session 存储方式：
-
-```yml
-spring:
-  session:
-    store-type: redis
-```
-
-3）移除 `MainApplication` 类开头 `@SpringBootApplication` 注解内的 exclude 参数：
-
-修改前：
-
-```java
-@SpringBootApplication(exclude = {RedisAutoConfiguration.class})
-```
-
-修改后：
-
-
-```java
-@SpringBootApplication
-```
-
-### Elasticsearch 搜索引擎
-
-1）修改 `application.yml` 的 Elasticsearch 配置为你自己的：
-
-```yml
-spring:
-  elasticsearch:
-    uris: http://localhost:9200
-    username: root
-    password: 123456
-```
-
-2）复制 `sql/post_es_mapping.json` 文件中的内容，通过调用 Elasticsearch 的接口或者 Kibana Dev Tools 来创建索引（相当于数据库建表）
-
-```
-PUT post_v1
-{
- 参数见 sql/post_es_mapping.json 文件
-}
-```
-
-这步不会操作的话需要补充下 Elasticsearch 的知识，或者自行百度一下~
-
-3）开启同步任务，将数据库的帖子同步到 Elasticsearch
-
-找到 job 目录下的 `FullSyncPostToEs` 和 `IncSyncPostToEs` 文件，取消掉 `@Component` 注解的注释，再次执行程序即可触发同步：
-
-```java
-// todo 取消注释开启任务
-//@Component
-```
-
-### 业务代码生成器
-
-支持自动生成 Service、Controller、数据模型代码，配合 MyBatisX 插件，可以快速开发增删改查等实用基础功能。
-
-找到 `generate.CodeGenerator` 类，修改生成参数和生成路径，并且支持注释掉不需要的生成逻辑，然后运行即可。
-
-```
-// 指定生成参数
-String packageName = "com.yupi.springbootinit";
-String dataName = "用户评论";
-String dataKey = "userComment";
-String upperDataKey = "UserComment";
-```
-
-生成代码后，可以移动到实际项目中，并且按照 `// todo` 注释的提示来针对自己的业务需求进行修改。
+## Copyright Notice
+The Lingxi Intelligence AIGC-BI Platform is licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to use, modify, and distribute the code of this project.
