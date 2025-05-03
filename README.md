@@ -3,6 +3,9 @@
 ## Project Introduction
 The Lingxi Intelligence AIGC-BI Platform is a smart data analysis platform built on the Spring Boot, Message Queue (MQ), Artificial Intelligence Generated Content (AIGC), and React technology stack. Compared to traditional Business Intelligence (BI) tools, this platform allows users to simply import raw datasets and input their analysis requirements to automatically generate visual charts and analytical conclusions, significantly reducing the cost and increasing the efficiency of data analysis.
 
+![image](https://github.com/user-attachments/assets/8b649e01-824a-42b9-a83d-81b1d87d116a)
+
+
 ## Core Features
 1. **Data Import and Management**:
    - Supports importing various data source formats (e.g., CSV, Excel, JSON).
