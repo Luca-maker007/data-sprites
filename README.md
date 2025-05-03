@@ -12,6 +12,8 @@ The Lingxi Intelligence AIGC-BI Platform is a smart data analysis platform built
    - Provides data preprocessing capabilities, including data cleaning, format conversion, and data merging.
    - Offers version management for datasets, enabling users to trace and compare different versions of data.
 
+![image](https://github.com/user-attachments/assets/ef559f65-281a-4b45-ae39-20402b59354f)
+
 2. **Smart Analysis Engine**:
    - Users can input simple analysis requests (e.g., "Analyze sales trends," "Identify high-value customers"), and the platform will automatically invoke AIGC models to generate precise analytical conclusions.
    - Combines machine learning algorithms to deeply mine data, uncovering hidden trends, associations, and anomalies within the data.
