@@ -101,8 +101,8 @@ We welcome all developers to contribute code, documentation, or suggestions for 
 5. **Wait for Review**: Project maintainers will review your code and may provide feedback for necessary modifications.
 
 ## Contact Information
-- **Project Homepage**: [https://github.com/your-repo/lingxi-bi-platform](https://github.com/your-repo/lingxi-bi-platform)
-- **Technical Support Email**: support@lingxi-bi.com
+- **Project Homepage**: https://github.com/Luca-maker007/data-sprits
+- **Technical Support Email**: ziqiwang2025@gmail.com
 - **Developer Community**: Join our Slack group to exchange experiences with other developers.
 
 ## Copyright Notice
