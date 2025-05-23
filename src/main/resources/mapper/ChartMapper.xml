@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bi.springbootinit.mapper.ChartMapper">
+
+    <resultMap id="BaseResultMap" type="com.bi.springbootinit.model.entity.Chart">
+            <id property="id" column="id" />
+            <result property="name" column="name"/>
+            <result property="goal" column="goal" />
+            <result property="chartData" column="chartData" />
+            <result property="chartType" column="chartType" />
+            <result property="genChart" column="genChart" />
+            <result property="genResult" column="genResult" />
+            <result property="userId" column="userId" />
+            <result property="createtime" column="createTime" />
+            <result property="updatetime" column="updateTime" />
+            <result property="isdelete" column="isDelete" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,goal,chartData,chartType,genChart,genResult,
+        userId,createTime,updateTime,isDelete
+    </sql>
+    <select id="queryChartData" parameterType="string" resultType="map">
+        ${querySql}
+    </select>
+</mapper>
